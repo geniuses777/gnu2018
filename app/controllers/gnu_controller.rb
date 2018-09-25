@@ -1,0 +1,2 @@
+class GnuController < ApplicationController
+end

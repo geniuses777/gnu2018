@@ -1,0 +1,125 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+body{
+  font-family: 'Noto Sans KR', sans-serif !important;
+}
+.ac:after{content:'';display:block;clear:both;}
+ul.ac li{float:left;}
+ul.ac{padding:0;margin:0;list-style:none;}
+
+
+
+.navbar:not(.is-fixed){
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.43);
+}
+
+.top_menu a{
+    padding: 0.3rem 0.6rem;
+    margin: 0 0.6rem;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    color:white;
+    font-size: 18px;
+}
+
+.is-fixed .top_menu a{
+  color: #333333;
+}
+
+.top_menu a.active, .top_menu a:hover{
+    border-bottom-color: white;
+}
+.is-fixed .top_menu a.active, .is-fixed  .top_menu a:hover{
+    border-bottom-color: #333333;
+}
+.main_master{
+  color:white;
+  text-align:center;
+}
+.ani_wrap{
+  font-size:70px;
+}
+
+#to_top{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 30%;
+  color: white;
+  opacity: 0.6;
+  line-height: 45px;
+  cursor:pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#to_top.hidden{
+  display:none;
+}
+
+
+@media  screen and (max-width: 768px) {
+  .ani_wrap{
+    font-size:50px;
+  }
+  .ani_wrap>div{
+    	min-width: 127px !important;
+  }
+}
+@media  screen and (max-width: 500px) {
+  .ani_wrap{
+    font-size:50px;
+  }
+  #mainNav .navbar-brand{
+    font-size: 18px;
+    margin-right: 0 !important;
+  }
+  .top_menu a{
+    padding: 0.2rem 0rem;
+    margin: 0 0.4rem;
+    font-size: 15px;
+  }
+}
+
+
+
+footer .list-inline-item{
+  text-align: center;
+}
+
+footer .list-inline-item .face{
+  border-radius: 15px;
+  width:45px;
+  height:45px;
+  overflow:hidden;
+  text-align: center;
+}
+footer .list-inline-item .face img{
+  width:45px;
+}
+footer .list-inline-item .name{
+  margin-top:4px;
+  font-size:13px;
+  color:#666;
+  font-weight: normal;
+}

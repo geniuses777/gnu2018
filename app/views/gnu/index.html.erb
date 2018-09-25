@@ -1,0 +1,109 @@
+<style>
+	html, body {
+	    overflow:hidden;
+	    margin:0;
+	    padding:0;
+	
+	    /*Avoid flicker on slides transitions for mobile phones #336 */
+	    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+  
+	.main_master{
+	background-image: url(<%=asset_path('festival.jpg')%>) !important;
+	text-shadow:1px 1px 10px rgba(0, 0, 0, 0.7);
+	}
+  
+	.main_events>div{
+		background: no-repeat center center;
+		background-color: #777777;
+		background-attachment: scroll;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	
+	}
+  
+	.pp-easing {
+	    -webkit-transition: all 1000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	    -moz-transition: all 1000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	    -o-transition: all 1000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	    transition: all 1000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	    /* custom */
+	}
+	
+	.intro{
+		color:white;
+		text-align:center;
+		font-size: 1.5em;
+		text-shadow:1px 1px 3px rgba(0,0,0,0.5);
+	}
+	.intro h1{
+		font-size:2em;
+	}
+	.ani_wrap>div{
+		min-width: 145px;
+		text-align: left;
+	}
+
+	@media  screen and (max-width: 500px) {
+		.intro h1{
+			font-size:1.5em;
+		}
+	}
+</style>
+
+<!-- Page Header -->
+<script>
+  $(function(){
+    $('.ani1').hide();
+    $('.ani2').hide();
+    $('.ani3').hide();
+	setTimeout(function(){$('.ani1').show();$('.ani1').addClass('animated bounceInDown');},200);
+	setTimeout(function(){$('.ani2').show();$('.ani2').addClass('animated bounceInDown');},600);
+	setTimeout(function(){$('.ani3').show();$('.ani3').addClass('animated bounceInDown');},1000);
+	
+	$('footer').hide();
+	
+	$('.main_events').pagepiling({
+	    navigation: {
+	    	'position': 'right'
+	   	}
+	});
+  })
+</script>
+
+<div class="main_events">
+	<div class="section main_master">
+		<h1 class="ani_wrap">
+				<div class="ani1" style="display:inline-block;">G<a style="font-size:20px">reatest</a></div>
+				<br>
+				<div class="ani2" style="display:inline-block;">N<a style="font-size:20px">otable</a></div>
+				<br>
+				<div class="ani3" style="display:inline-block;">U<a style="font-size:20px">nlimited</a></div>
+				<br>
+		</h1>
+		<div class="subheading">정다운 대동제</div>
+	</div>
+	<div class="section man_contest" style="background-image:url(<%=asset_path('lady_contest.jpg')%>)">
+		<div class="intro">
+			<h1>개척 레이디</h1>
+			<p>야외공연장</p>
+			<p>16일 19시</p>
+		</div>
+	</div>
+	<div class="section scare" style="background-image:url(<%=asset_path('scare_contest.jpg')%>)">
+		<div class="intro">
+			<h1>고스트 하우스</h1>
+			<p>학생회관 3층</p>
+			<p>17일 19시-24시</p>
+		</div>
+	</div>
+	<div class="section singer_contest" style="background-image:url(<%=asset_path('singer_contest.jpg')%>)">
+		<div class="intro">
+			<h1>개척 가요제</h1>
+			<p>야외공연장</p>
+			<p>17일 21시</p>
+		</div>
+	</div>
+</div>
