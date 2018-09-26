@@ -155,26 +155,28 @@ header.masthead {
   header.masthead .post-heading,
   header.masthead .site-heading {
     padding: 120px 0 80px;
-    color: white; }
+    color: #beec65; }
     @media only screen and (min-width: 768px) {
       header.masthead .page-heading,
       header.masthead .post-heading,
       header.masthead .site-heading {
-        padding: 100px 0; } }
+        padding: 60px 0; } }
   header.masthead .page-heading,
   header.masthead .site-heading {
     text-align: center; }
     header.masthead .page-heading h1,
-    header.masthead .site-heading h1 {
-      font-size: 50px;
+    header.masthead .site-heading img {
+      /*font-size: 50px;*/
+      width: 40%;
       margin-top: 0; }
     header.masthead .page-heading .subheading,
     header.masthead .site-heading .subheading {
-      font-size: 24px;
-      font-weight: 300;
+      font-size: 28px;
+      font-family: 'Sunflower', sans-serif;
+      /*font-weight: 300;*/
       line-height: 1.1;
       display: block;
-      margin: 10px 0 0;
+      margin: 18px 0 0;
        }
     @media only screen and (min-width: 768px) {
       header.masthead .page-heading h1,

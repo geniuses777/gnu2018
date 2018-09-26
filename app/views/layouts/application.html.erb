@@ -6,6 +6,7 @@
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
+	<link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
   <!— Global site tag (gtag.js) - Google Analytics —>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108031331-1"></script>
   <script>
@@ -20,13 +21,13 @@
 	<!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="/">GNU festival</a>
+      <a class="navbar-brand" href="/"><img src="<%=asset_path('logo')%>" width="190px"></a>
     	<ul class="top_menu ac">
-    		<li><a class="nav-link <%=((controller.action_name=='index') ? 'active' : '')%>" href="/"><img src="<%=asset_path('nav_home.jpg')%>" width="80px"></a></li>
-    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/event"><img src="<%=asset_path('nav_event.jpg')%>" width="80px"></a></li>
-    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/eat"><img src="<%=asset_path('nav_eat.jpg')%>" width="80px"></a></li>
-    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/bus"><img src="<%=asset_path('nav_bus.jpg')%>" width="80px"></a></li>
-    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/board"><img src="<%=asset_path('nav_geshipan.jpg')%>" width="80px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='index') ? 'active' : '')%>" href="/"><img src="<%=asset_path('Menu_home')%>" width="50px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/event"><img src="<%=asset_path('Menu_event.png')%>" width="50px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/eat"><img src="<%=asset_path('Menu_eatjoy.png')%>" width="80px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/bus"><img src="<%=asset_path('Menu_bus.png')%>" width="60px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/board"><img src="<%=asset_path('Menu_board.png')%>" width="80px"></a></li>
     	</ul>
     </div>
   </nav>
