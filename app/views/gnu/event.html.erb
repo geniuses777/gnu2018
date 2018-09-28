@@ -7,16 +7,11 @@
 
     <style>
     
-      body>.owl-carousel>.day>.day1lineup>.day1head>h1{
-        text-align:right;
+      .day1head>h1{
+        text-align:center;
       }
-      .owl-carousel>.day>.day1lineup>.day1pick{
-        float:right;
-      }
-      .owl-carousel>.day>.day1lineup>.day1pick>img{
-        width:50px;
-        height:50px;
-      }
+     
+      
       .owl-carousel>.day>div{
 	    	background: no-repeat center center;
 	    	background-color: #777777;
@@ -26,6 +21,12 @@
 		    -o-background-size: cover;
 	    	background-size: cover;
 	      }
+	      .ddd{
+	        width:50px;
+          height:50px;
+          float:right;
+	      }
+	      
     </style>
   </head>
   <body>
@@ -54,8 +55,12 @@
             <h1>1DAY</h1>
           </div>
           <div class="day1pick">
-            <img src="<%=asset_path('yoon.jpg')%>" />
-            <img src="<%=asset_path('suji.png')%>" />
+            <div>
+              <img class="ddd" src="<%=asset_path('yoon.jpg')%>" />
+            </div>
+            <div>
+              <img class="ddd" src="<%=asset_path('suji.png')%>" />
+            </div>
           
           </div>
         </div>
