@@ -6,10 +6,18 @@
     
 
     <style>
-      .owl-carousel>.day>.day1lineup>.day1head>h1{
+    
+      body>.owl-carousel>.day>.day1lineup>.day1head>h1{
         text-align:right;
       }
-      .owl-carousel>div{
+      .owl-carousel>.day>.day1lineup>.day1pick{
+        float:right;
+      }
+      .owl-carousel>.day>.day1lineup>.day1pick>img{
+        width:50px;
+        height:50px;
+      }
+      .owl-carousel>.day>div{
 	    	background: no-repeat center center;
 	    	background-color: #777777;
 	    	background-attachment: scroll;
@@ -46,7 +54,8 @@
             <h1>1DAY</h1>
           </div>
           <div class="day1pick">
-            <image src="(<%=asset_path('yoon.jpg')%>)" />
+            <img src="<%=asset_path('yoon.jpg')%>" />
+            <img src="<%=asset_path('suji.png')%>" />
           
           </div>
         </div>
