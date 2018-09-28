@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get '/event'=>'gnu#event'
   get '/eat'=>'gnu#eat'
   get '/bus'=>'gnu#bus'
-  get '/board'=>'gnu#board'
   
   
   
