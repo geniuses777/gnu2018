@@ -1,12 +1,85 @@
-<header class="masthead" style="background-image: url(<%=asset_path('header_event.jpg')%>)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="site-heading" style='    text-shadow: 1px 1px 5px #000;'>
-          <img src="<%=asset_path('event.png')%>" width="200px">
-          <span class="subheading">낮밤없이 이뤄지는 행사들을 확인해보세요!</span>
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/stylesheets/owl.carousel.min.css">
+    <script src="jquery.min.js"></script> 
+    <script src="assets/javascripts/owl.carousel.min.js"></script> 
+    
+
+    <style>
+    
+      body>.owl-carousel>.day>.day1lineup>.day1head>h1{
+        text-align:right;
+      }
+      .owl-carousel>.day>.day1lineup>.day1pick{
+        float:right;
+      }
+      .owl-carousel>.day>.day1lineup>.day1pick>img{
+        width:50px;
+        height:50px;
+      }
+      .owl-carousel>.day>div{
+	    	background: no-repeat center center;
+	    	background-color: #777777;
+	    	background-attachment: scroll;
+	  	  -webkit-background-size: cover;
+	      -moz-background-size: cover;
+		    -o-background-size: cover;
+	    	background-size: cover;
+	      }
+    </style>
+  </head>
+  <body>
+    <script>
+    $('.owl-carousel').owlCarousel({ items:1, 
+    loop:true,
+    center:true   }); 
+    </script>
+    <header class="masthead" style="background-image: url(<%=asset_path('header_event')%>)">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading" style='    text-shadow: 1px 1px 5px #000;'>
+              <img src="<%=asset_path('event.png')%>" width="200px">
+              <span class="subheading">낮밤없이 이뤄지는 행사들을 확인해보세요!</span>
+            </div>
+          </div>
         </div>
       </div>
+    </header>
+    
+    <div class="owl-carousel">
+      <div class="day"> <!--한페이지에 보이기 -->
+        <div class="day1lineup">
+          <div class="day1head">
+            <h1>1DAY</h1>
+          </div>
+          <div class="day1pick">
+            <img src="<%=asset_path('yoon.jpg')%>" />
+            <img src="<%=asset_path('suji.png')%>" />
+          
+          </div>
+        </div>
+      
+        <div class="day1schedule"> <!--한페이지에 보이기 -->
+        
+        </div>
+      </div>
+    
+    
+    
+      <div class="day">
+        <h1>2DAY</h1>
+      </div>
+    
+    
+    
+      <div class="day">
+        <h1>3DAY</h1>
+      </div>
     </div>
-  </div>
-</header>
+  </body>
+  
+</html>
+
+
+
