@@ -1,42 +1,92 @@
 <html>
   <head>
-    <link rel="stylesheet" href="assets/stylesheets/owl.carousel.min.css">
-    <script src="jquery.min.js"></script> 
-    <script src="assets/javascripts/owl.carousel.min.js"></script> 
+    <!--<link rel="stylesheet" type="text/css" href="assets/stylesheets/owl.carousel.min.css">-->
+    <!--<script type="text/javascript" src="assets/javascripts/jquery.min.js"></script> 
+    <script type="text/javascript" src="assets/javascripts/owl.carousel.min.js"></script> 
+    
+ 
+ 
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/sidebar.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/sidebar.js"></script>-->
+ 
     
 
     <style>
     
-      .day1head>h1{
+      @media screen and (min-width: 768px) {
+        img.dayday{
+          display: block;
+          margin-left:10%;
+          width: 10%;
+          margin-right:70%;
+          float:left;
+        }
+      
+        img.night{
+          display: block;
+          margin-right:10%;
+          width: 10%;
+          margin-left:70%;
+          float:right;
+        }
+        
+        .col-md-12 img.itemDY{
+          display: block;
+          margin-right:3.3%;
+          width: 20%;
+          float:right;
+        }
+      }
+      
+      @media screen and (max-width: 767px) {
+        img.dayday{
+          display: block;
+          margin-left:45%;
+          width: 10%;
+          margin-right:40%;
+          float:left;
+        }
+      
+        img.night{
+          display: block;
+          margin-right:45%;
+          width: 10%;
+          margin-left:40%;
+          float:right;
+        }
+      }
+      
+      .col-md-6 img.itemDY{
+        display: block;
+        margin-right:3.3%;
+        width: 45%;
+        float:right;
+      }
+    
+      .head{
+        margin-top:3%;
+        margin-bottom:3%;
+      }
+    
+      .head>h1{
         text-align:center;
       }
-     
-      
-      .owl-carousel>.day>div{
-	    	background: no-repeat center center;
-	    	background-color: #777777;
-	    	background-attachment: scroll;
-	  	  -webkit-background-size: cover;
-	      -moz-background-size: cover;
-		    -o-background-size: cover;
-	    	background-size: cover;
-	    	;
-	      }
-	      .ddd{
-	        width:50px;
-          height:50px;
-          float:right;
-	      }
+
+	     .owl-carousel .owl-item img.ddd{
+	       display: block;
+	       margin-right:3.3%;
+         width: 45%;
+         Height: 100%;
+         float:right;
+	     }
+	     
 	      
     </style>
   </head>
   <body>
-    <script>
-    $('.owl-carousel').owlCarousel({ items:1, 
-    loop:true,
-    center:true   }); 
-    </script>
-    <header class="masthead" style="background-image: url(<%=asset_path('header_event')%>)">
+    <header class="masthead" style="height:100%; background-image: url(<%=asset_path('header_event')%>)">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
@@ -49,12 +99,13 @@
       </div>
     </header>
     
+    <div class="head">
+      <h1>FESTIVAL LINE-UP</h1>
+    </div>
+    
     <div class="owl-carousel">
       <div class="day"> <!--한페이지에 보이기 -->
-        <div class="day1lineup">
-          <div class="day1head">
-            <h1>1DAY</h1>
-          </div>
+        <div class="section day1lineup">
           <div class="day1pick">
             <div>
               <img class="ddd" src="<%=asset_path('yoon.jpg')%>" />
@@ -62,29 +113,103 @@
             <div>
               <img class="ddd" src="<%=asset_path('suji.png')%>" />
             </div>
-          
           </div>
         </div>
-      
-        <div class="day1schedule"> <!--한페이지에 보이기 -->
-        
+      </div>
+    
+      <div class="day">
+        <div class="section day1lineup">
+          <div class="day1pick">
+            <div>
+              <img class="ddd" src="<%=asset_path('yoon.jpg')%>" />
+            </div>
+            <div>
+              <img class="ddd" src="<%=asset_path('suji.png')%>" />
+            </div>
+          </div>
         </div>
       </div>
-    
-    
-    
+        
       <div class="day">
-        <h1>2DAY</h1>
+        <div class="section day1lineup">
+          <div class="day1pick">
+            <div>
+              <img class="ddd" src="<%=asset_path('yoon.jpg')%>" />
+            </div>
+            <div>
+              <img class="ddd" src="<%=asset_path('suji.png')%>" />
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
     
+    <div class="head">
+      <h1>행사일정</h1>
+    </div>
     
-    
-      <div class="day">
-        <h1>3DAY</h1>
+    <div class="section">
+      <div class="intro">
+        <div class="row">
+          <div id="sun" class="col-md-6">
+            <img class="dayday" src="<%=asset_path('yoon.jpg')%>" />
+            <div class="dayday1">
+              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
+              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
+              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
+              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
+            </div>
+            <div class="dayday2" style="display:none">
+              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
+              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
+              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
+              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
+            </div>
+          </div>
+          <div id="moon" class="col-md-6">
+            <img class="night" src="<%=asset_path('suji.png')%>" />
+            <div class="night1">
+              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
+              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
+              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
+              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
+            </div>
+            <div class="night2"  style="display:none">
+              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
+              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
+              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
+              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
-  
+  <script>
+    $(".dayday").click(function(){
+      $('#sun').toggleClass('col-md-6');
+      $('#sun').toggleClass('col-md-12');
+      if($(".dayday2").css("display") == "none"){   
+        $('.dayday2').show();
+        $('#moon').hide();
+    } else {  
+        $('.dayday2').hide();
+        $('#moon').show();
+    }
+    });
+    
+    $(".night").click(function(){
+      $('#moon').toggleClass('col-md-6');
+      $('#moon').toggleClass('col-md-12');
+      if($(".night2").css("display") == "none"){   
+        $('.night2').show();
+        $('#sun').hide();
+    } else {  
+        $('.night2').hide();
+        $('#sun').show();
+    }
+    });
+    </script>
 </html>
 
 
