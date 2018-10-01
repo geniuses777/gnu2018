@@ -19,7 +19,7 @@
         img.dayday{
           display: block;
           margin-left:10%;
-          width: 15%;
+          width: 10%;
           margin-right:70%;
           float:left;
         }
@@ -27,7 +27,7 @@
         img.night{
           display: block;
           margin-right:10%;
-          width: 15%;
+          width: 10%;
           margin-left:70%;
           float:right;
         }
@@ -44,7 +44,7 @@
         img.dayday{
           display: block;
           margin-left:45%;
-          width:18%;
+          width: 10%;
           margin-right:40%;
           float:left;
         }
@@ -52,7 +52,7 @@
         img.night{
           display: block;
           margin-right:45%;
-          width: 18%;
+          width: 10%;
           margin-left:40%;
           float:right;
         }
@@ -64,7 +64,6 @@
         width: 45%;
         float:right;
       }
-
     
       .head{
         margin-top:3%;
@@ -88,7 +87,7 @@
          Height: 100%;
          float:right;
 	     }
-	      .card{
+	           .card{
           float:left;
           margin-left:200px
           margin-bottom:50px;
@@ -103,7 +102,6 @@
           margin-left:30px;
           margin-top:10px;
         }
-	     
 	     
 	      
     </style>
@@ -121,33 +119,21 @@
         </div>
       </div>
     </header>
-     <p style="text-align:center;">낮, 밤 아이콘을 클릭하면 열리고 다시클릭하면 닫혀요!</p>
-    <div class="owl-carousel">
-      <div class="day"> <!--한페이지에 보이기 -->
-        <div class="section day1lineup">
-          <div class="day1pick">
-            <div>
-              <img class="ddd" src="<%=asset_path('yoon.jpg')%>" />
-            </div>
-            <div>
-              <img class="ddd" src="<%=asset_path('suji.png')%>" />
-            </div>
-          </div>
-        </div>
-      </div>
     
     
     
       
     
-   
-   <div class="section">
+    <div class="head">
+      <h1>행사일정</h1>
+    </div>
+    
+    <div class="section">
       <div class="intro">
         <div class="row">
           <div id="sun" class="col-md-6">
             <img class="dayday" src="/noon.png" />
             <div class="dayday1">
-              
               <% @name.each do |t|%>
                   <% @noon.each do |k| %>
                      <div class="card" style="width: 18rem;">
@@ -160,14 +146,13 @@
                <%end%> 
             </div>
             <div class="dayday2" style="display:none">
+            
             </div>
-            </div>
-           
-          
+          </div>
           <div id="moon" class="col-md-6">
             <img class="night" src="/night.png" />
             <div class="night1">
-              <% @name.each do |t|%>
+            <% @name.each do |t|%>
                   <% @night.each do |k| %>
                      <div class="card" style="width: 18rem;">
                       <img class="card-img-top" src="/<%=k%>.png" alt="Card image cap">
@@ -178,10 +163,9 @@
                 <%end%> 
                <%end%> 
             </div>
-            
             <div class="night2"  style="display:none">
+           
             </div>
-            
           </div>
         </div>
       </div>
@@ -213,7 +197,6 @@
     });
     </script>
 </html>
-
 
 
 
