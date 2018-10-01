@@ -41,14 +41,20 @@
 	.intro h1{
 		font-size:2em;
 	}
+	.intro img{
+		width:700px;
+	}
 	.ani_wrap>div{
 		min-width: 145px;
 		text-align: left;
 	}
-
 	@media  screen and (max-width: 500px) {
 		.intro h1{
 			font-size:1.5em;
+		}
+		.intro img{
+			width:370px;
+			height:330px;
 		}
 	}
 </style>
@@ -78,13 +84,16 @@
 		<img src="<%=asset_path('Menu_logo.png')%>" width="60%">
 	</div>
 	<div class="section man_contest" style="background-image:url(<%=asset_path('Day1_background.jpg')%>)">
-		<img src="<%=asset_path('Day1.png')%>" width="60%">
-	</div>
-	<div class="section scare" style="background-image:url(<%=asset_path('Day2_background.jpg')%>)">
+		<!--<img src="<%=asset_path('Day1.png')%>" width="60%">-->
 		<div class="intro">
 			<h1>고스트 하우스</h1>
 			<p>학생회관 3층</p>
 			<p>17일 19시-24시</p>
+		</div>
+	</div>
+	<div class="section scare" style="background-image:url(<%=asset_path('Day2_background.jpg')%>)">
+		<div class="intro">
+			<img src="<%=asset_path('Day1.png')%>">
 		</div>
 	</div>
 	<div class="section singer_contest" style="background-image:url(<%=asset_path('Day3_background.jpg')%>)">
