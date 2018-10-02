@@ -101,29 +101,29 @@
           <div id="sun" class="col-md-6">
             <img class="dayday" src="/noontest.png" />
             <div class="dayday1">
-                <% @noon.each do |k| %>
               
+              <%for i in 0..3 %>
                 <div class="card">
-                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=k%>.png" alt="Card image cap">
+                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=@noon[i]%>.png" alt="Card image cap">
                      <div class="card-body">
-                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Time And Map</button>
+                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@noon[i]%>"> Time And Map</button>
                     </div>
                   </div>
                 <%end%>
                 <!-- Modal -->
-                <% @noon.each do |k| %>
-                <div class="modal fade" id="exampleModal"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
+                <%for i in 0..3 %>
+                <div class="modal fade" id="exampleModal<%=@noon[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <h5 class="modal-title" id="exampleModalLabel"><h2><%=@nooname[i]%></h2></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                          <span aria-hidden="true"></span>
                         </button>
                       </div>
                       <div class="modal-body">
-                         <img class="card-img-top" src="/a<%=k%>.png"  alt="Card image cap">
-                         <h2><%=k%></h2>
+                         <img class="card-img-top" src="/a<%=@noon[i]%>.png"  alt="Card image cap">
+                         <h2></h2>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -134,31 +134,28 @@
                 <%end%>
             </div>
             <div class="dayday2" style="display:none">
-            <% @name.each do |t|%>
-                <% @noon1.each do |k| %>
-              
-                <div class="card" style="width: 18rem;">
-                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=k%>.png" alt="Card image cap">
+             <%for i in 0..1 %>
+                <div class="card">
+                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=@noon1[i]%>.png" alt="Card image cap">
                      <div class="card-body">
-                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                  Time And Map
-                </button>
+                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@noon1[i]%>"> Time And Map</button>
+                    </div>
                   </div>
-                  </div>
-                
+                <%end%>
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
+                <%for i in 0..1 %>
+                <div class="modal fade" id="exampleModal<%=@noon1[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <h5 class="modal-title" id="exampleModalLabel"><h2><%=@noon1name[i]%></h2></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                          <span aria-hidden="true"></span>
                         </button>
                       </div>
                       <div class="modal-body">
-                         <img class="card-img-top" src="/a<%=k%>.png" alt="Card image cap">
-                         <h2><%=k%></h2>
+                         <img class="card-img-top" src="/<%=@noon1a[i]%>.png"  alt="Card image cap">
+                         <h2></h2>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -166,37 +163,34 @@
                     </div>
                   </div>
                 </div>
-                <%end%> 
-                <%end%> 
+                <%end%>
             </div>
           </div>
           <div id="moon" class="col-md-6" style="background-color:black">
             <img class="night" src="/night.png" />
             <div class="night1">
-            <% @name.each do |t|%>
-                <% @night.each do |k| %>
-                <div class="card" style="width: 18rem;">
-                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=k%>.png" alt="Card image cap">
+           <%for i in 0..3 %>
+                <div class="card">
+                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=@night[i]%>.png" alt="Card image cap">
                      <div class="card-body">
-                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                  Time And Map
-                </button>
+                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@night[i]%>"> Time And Map</button>
+                    </div>
                   </div>
-                  </div>
-                
+                <%end%>
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
+                <%for i in 0..3 %>
+                <div class="modal fade" id="exampleModal<%=@night[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <h5 class="modal-title" id="exampleModalLabel"><h2><%=@nightname[i]%></h2></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                          <span aria-hidden="true"></span>
                         </button>
                       </div>
                       <div class="modal-body">
-                         <img class="card-img-top" src="/b<%=k%>.png" alt="Card image cap">
-                         <h2><%=k%></h2>
+                         <img class="card-img-top" src="/<%=@nighta[i]%>.png"  alt="Card image cap">
+                         <h2></h2>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -204,34 +198,31 @@
                     </div>
                   </div>
                 </div>
-                <%end%> 
-                <%end%> 
+                <%end%>
             </div>
             <div class="night2"  style="display:none;">
-             <% @name.each do |t|%>
-                <% @night1.each do |k| %>
-                <div class="card" style="width: 18rem;">
-                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=k%>.png" alt="Card image cap">
+           <%for i in 0..3 %>
+                <div class="card">
+                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=@night1[i]%>.png" alt="Card image cap">
                      <div class="card-body">
-                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                  Time And Map
-                </button>
+                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@night1[i]%>"> Time And Map</button>
+                    </div>
                   </div>
-                  </div>
-                
+                <%end%>
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
+                <%for i in 0..3 %>
+                <div class="modal fade" id="exampleModal<%=@night1[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <h5 class="modal-title" id="exampleModalLabel"><h2><%=@night1name[i]%></h2></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                          <span aria-hidden="true"></span>
                         </button>
                       </div>
                       <div class="modal-body">
-                         <img class="card-img-top" src="/b<%=k%>.png" alt="Card image cap">
-                         <h2><%=k%></h2>
+                         <img class="card-img-top" src="/<%=@night1a[i]%>.png"  alt="Card image cap">
+                         <h2></h2>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -239,8 +230,7 @@
                     </div>
                   </div>
                 </div>
-                <%end%> 
-                <%end%> 
+                <%end%>
             </div>
           </div>
         </div>
