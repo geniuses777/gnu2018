@@ -21,7 +21,6 @@ Rails.application.routes.draw do
    get '/popup/12'=>"popup#12"
    get '/popup/13'=>"popup#13"
    get '/popup/14'=>"popup#14"
-   get '/popup/15'=>"popup#15"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

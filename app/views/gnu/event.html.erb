@@ -19,14 +19,10 @@
     
 
     <style>
-    
-      @media screen and (min-width: 768px) {
         img.dayday{
           display: block;
-          margin-left:10%;
-          width: 10%;
-          margin-right:70%;
-          float:left;
+          width: 70%;
+          margin: 0 auto;
         }
       
         img.night{
@@ -43,26 +39,6 @@
           width: 20%;
           float:right;
         }
-      }
-      
-      @media screen and (max-width: 767px) 
-      {
-        img.dayday{
-          display: block;
-          margin-left:45%;
-          width: 10%;
-          margin-right:40%;
-          float:left;
-        }
-      
-        img.night{
-          display: block;
-          margin-right:45%;
-          width: 10%;
-          margin-left:40%;
-          float:right;
-        }
-      }
       
       .col-md-6 img.itemDY{
         display: block;
@@ -70,22 +46,12 @@
         width: 45%;
         float:right;
       }
-    
       .head{
-        margin-top:3%;
-        margin-bottom:3%;
+        margin:1.4em;
       }
-    
       .head>h3{
         text-align:center;
       }
-      .owl-carousel .owl-item img.bbb{
-	       margin-right:3.3%;
-         width: 45%;
-         Height: 100%;
-         float:right;
-	     }
-
 	     .owl-carousel .owl-item img.ddd{
 	       display: block;
 	       margin-right:3.3%;
@@ -93,13 +59,6 @@
          Height: 100%;
          float:right;
 	     }
-
-	       .card{
-          float:left;
-          margin-left:200px
-          margin-bottom:20px;
-          margin-top:20px;
-       }
        .card-text{
          text-align:center;
        }
@@ -107,8 +66,14 @@
           border:double;
           border-width:10px;
           border-color:green;
-          margin-left:30px;
-          margin-top:10px;
+          height: 20em;
+          margin-right:0.8em;
+          margin-bottom: 2em;
+          float: left;
+        }
+        .dayday1{
+          width: 95%;
+          margin: 2em auto;
         }
     </style>
   </head>
@@ -127,38 +92,51 @@
     </header>
     
     <div class="head">
-      <h3>행사일정</h3><br>
-      <h3>아이콘을 클릭하면 펼쳐지고 다시 클릭하면 원래페이지로 돌아옵니다.</h3>
-    </div>
-    
-
-    
-      
-    
-    <div class="head">
-      <h1>행사일정</h1>
+      <h3 style="font-size:2em; font-family: 'Gamja Flower', cursive;">낮밤 아이콘을 클릭해보세요! 다시 누르면 원상복귀됩니다!</h3>
     </div>
     
     <div class="section">
       <div class="intro">
         <div class="row">
           <div id="sun" class="col-md-6">
-            <img class="dayday" src="<%=asset_path('yoon.jpg')%>" />
+            <img class="dayday" src="/noontest.png" />
             <div class="dayday1">
-
-              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
-              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
-              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
-              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
-            </div>
-            <div class="dayday2" style="display:none;background-color:bleck;">
-              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
-              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
-              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
-              <img class="itemDY" src="<%=asset_path('suji.png')%>" />
-=======
-              <% @name.each do |t|%>
                 <% @noon.each do |k| %>
+              
+                <div class="card">
+                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=k%>.png" alt="Card image cap">
+                     <div class="card-body">
+                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Time And Map</button>
+                    </div>
+                  </div>
+                <%end%>
+                <!-- Modal -->
+                <% @noon.each do |k| %>
+                <div class="modal fade" id="exampleModal"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                         <img class="card-img-top" src="/a<%=k%>.png"  alt="Card image cap">
+                         <h2><%=k%></h2>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <%end%>
+            </div>
+            <div class="dayday2" style="display:none">
+            <% @name.each do |t|%>
+                <% @noon1.each do |k| %>
+              
                 <div class="card" style="width: 18rem;">
                    <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=k%>.png" alt="Card image cap">
                      <div class="card-body">
@@ -173,13 +151,14 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"><%=t%></h5>
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                         <img class="card-img-top" src="/a<%=k%>.jpg" alt="Card image cap">
+                         <img class="card-img-top" src="/a<%=k%>.png" alt="Card image cap">
+                         <h2><%=k%></h2>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -190,26 +169,10 @@
                 <%end%> 
                 <%end%> 
             </div>
-            <div class="dayday2" style="display:none">
-            
->>>>>>> e9df2acfa3a3a523fe2a6d6cc939d90af12bd448
-            </div>
           </div>
-          <div id="moon" class="col-md-6">
-            <img class="night" src="<%=asset_path('suji.png')%>" />
+          <div id="moon" class="col-md-6" style="background-color:black">
+            <img class="night" src="/night.png" />
             <div class="night1">
-<<<<<<< HEAD
-              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
-              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
-              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
-              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
-            </div>
-            <div class="night2"  style="display:none">
-              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
-              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
-              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
-              <img class="itemDY" src="<%=asset_path('yoon.jpg')%>" />
-=======
             <% @name.each do |t|%>
                 <% @night.each do |k| %>
                 <div class="card" style="width: 18rem;">
@@ -226,13 +189,13 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"><%=t%></h5>
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                         <img class="card-img-top" src="/3<%=k%>.png" alt="Card image cap">
+                         <img class="card-img-top" src="/b<%=k%>.png" alt="Card image cap">
                          <h2><%=k%></h2>
                       </div>
                       <div class="modal-footer">
@@ -245,8 +208,39 @@
                 <%end%> 
             </div>
             <div class="night2"  style="display:none;">
-           
->>>>>>> e9df2acfa3a3a523fe2a6d6cc939d90af12bd448
+             <% @name.each do |t|%>
+                <% @night1.each do |k| %>
+                <div class="card" style="width: 18rem;">
+                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=k%>.png" alt="Card image cap">
+                     <div class="card-body">
+                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  Time And Map
+                </button>
+                  </div>
+                  </div>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                         <img class="card-img-top" src="/b<%=k%>.png" alt="Card image cap">
+                         <h2><%=k%></h2>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <%end%> 
+                <%end%> 
             </div>
           </div>
         </div>
@@ -279,6 +273,3 @@
     });
     </script>
 </html>
-
-
-
