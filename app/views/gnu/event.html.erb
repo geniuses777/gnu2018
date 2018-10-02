@@ -24,7 +24,6 @@
           width: 70%;
           margin: 0 auto;
         }
-      
         img.night{
           display: block;
           margin-right:10%;
@@ -32,49 +31,92 @@
           margin-left:70%;
           float:right;
         }
-        
         .col-md-12 img.itemDY{
           display: block;
           margin-right:3.3%;
           width: 20%;
           float:right;
         }
-      
-      .col-md-6 img.itemDY{
-        display: block;
-        margin-right:3.3%;
-        width: 45%;
-        float:right;
-      }
-      .head{
-        margin:1.4em;
-      }
-      .head>h3{
-        text-align:center;
-      }
-	     .owl-carousel .owl-item img.ddd{
-	       display: block;
-	       margin-right:3.3%;
-         width: 45%;
-         Height: 100%;
-         float:right;
-	     }
-       .card-text{
-         text-align:center;
-       }
-        .card{
-          border:double;
-          border-width:10px;
-          border-color:green;
-          height: 20em;
-          margin-right:0.8em;
-          margin-bottom: 2em;
-          float: left;
+        .col-md-6 img.itemDY{
+          display: block;
+          margin-right:3.3%;
+          width: 45%;
+          float:right;
         }
-        .dayday1{
-          width: 95%;
-          margin: 2em auto;
+        .head{
+          margin:1.4em;
         }
+        .head>h3{
+          text-align:center;
+        }
+  	     .owl-carousel .owl-item img.ddd{
+  	       display: block;
+  	       margin-right:3.3%;
+           width: 45%;
+           Height: 100%;
+           float:right;
+  	     }
+         .card-text{
+           text-align:center;
+         }
+         /*낮 오전*/
+          .dayday1>.card{
+            border:double;
+            border-width:10px;
+            border-color:green;
+            /*height: 20em;*/
+            width:47%;
+            margin-right:0.8em;
+            margin-bottom: 2em;
+            float: left;
+          }
+          .dayday1{
+            width: 95%;
+            margin: 2em auto;
+          }
+          img.card-img-top{
+                width: 100%;
+                height: 13em;
+          }
+          .dayday1>.card>.card-body>.btn{
+                margin: 0 auto;
+                display: block;
+                margin-bottom: 1em;
+                font-family: 'Hi Melody', cursive;
+                font-size: 1.2em;
+                border-radius: 1em;
+                border-color: #2196F3;
+                background-color: #42A5F5;
+          }
+          /*낮 오후*/
+          .dayday1>.card{
+            border:double;
+            border-width:10px;
+            border-color:green;
+            /*height: 20em;*/
+            width:47%;
+            margin-right:0.8em;
+            margin-bottom: 2em;
+            float: left;
+          }
+          .dayday1{
+            width: 95%;
+            margin: 2em auto;
+          }
+          img.card-img-top{
+                width: 100%;
+                height: 13em;
+          }
+          .dayday1>.card>.card-body>.btn{
+                margin: 0 auto;
+                display: block;
+                margin-bottom: 1em;
+                font-family: 'Hi Melody', cursive;
+                font-size: 1.2em;
+                border-radius: 1em;
+                border-color: #2196F3;
+                background-color: #42A5F5;
+          }
     </style>
   </head>
   <body>
@@ -92,21 +134,21 @@
     </header>
     
     <div class="head">
-      <h3 style="font-size:2em; font-family: 'Gamja Flower', cursive;">낮밤 아이콘을 클릭해보세요! 다시 누르면 원상복귀됩니다!</h3>
+      <h3 style="font-size:1.6em; font-family: 'Gamja Flower', cursive;">낮밤 아이콘을 클릭해보세요! 다시 누르면 원상복귀됩니다!</h3>
     </div>
     
     <div class="section">
       <div class="intro">
-        <div class="row">
+        <div class="row" style="margin-left:0px; margin-right:0px;">
           <div id="sun" class="col-md-6">
             <img class="dayday" src="/noontest.png" />
+            <!--낮 이전 -->
             <div class="dayday1">
-              
               <%for i in 0..3 %>
                 <div class="card">
-                   <img style="width:250px;, height:250px; margin-left:10px; margin-top:10px;" class="card-img-top" src="/<%=@noon[i]%>.png" alt="Card image cap">
-                     <div class="card-body">
-                       <button  style= "text-align:center; margin-left:30px; margin-bottom:10px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@noon[i]%>"> Time And Map</button>
+                   <img class="card-img-top" src="/<%=@noon[i]%>.png" alt="Card image cap">
+                     <div class="card-body" style="flex:0; padding: 0px">
+                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@noon[i]%>">상세정보</button>
                     </div>
                   </div>
                 <%end%>
@@ -133,6 +175,7 @@
                 </div>
                 <%end%>
             </div>
+            <!--낮 이후-->
             <div class="dayday2" style="display:none">
              <%for i in 0..1 %>
                 <div class="card">
@@ -168,6 +211,7 @@
           </div>
           <div id="moon" class="col-md-6" style="background-color:black">
             <img class="night" src="/night.png" />
+            <!--밤 이전-->
             <div class="night1">
            <%for i in 0..3 %>
                 <div class="card">
@@ -200,6 +244,7 @@
                 </div>
                 <%end%>
             </div>
+            <!--밤 이후-->
             <div class="night2"  style="display:none;">
            <%for i in 0..3 %>
                 <div class="card">
