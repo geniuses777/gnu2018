@@ -119,7 +119,7 @@
       <div class="intro">
         <div class="row" style="margin-right:0px; margin-left:0px">
           <div id="sun" class="col-md-6">
-            <img class="dayday" src="/noontest.png" />
+            <img class="dayday" src="/noon.jpg" />
             <!--낮 이전 -->
             <div class="dayday1">
               
@@ -159,7 +159,7 @@
              <%for i in 0..1 %>
                 <div class="card">
                    <img class="card-img-top" src="/<%=@noon1[i]%>.png" alt="Card image cap">
-                     <div class="card-body">
+                     <div class="card-body" style="padding:0px">
                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@noon1[i]%>">상세정보</button>
                     </div>
                   </div>
@@ -189,14 +189,14 @@
             </div>
           </div>
           <!--밤-->
-          <div id="moon" class="col-md-6" style="height:100%; background-image: url(<%=asset_path('star1.jpg')%>)">
-            <img class="night" src="/nighttest.png" />
+          <div id="moon" class="col-md-6" style="background-image: url(<%=asset_path('star1.jpg')%>)">
+            <img class="night" src="/night.jpg" />
             <!--밤 이전 -->
             <div class="night1">
            <%for i in 0..3 %>
-                <div class="card">
+                <div class="card" style="background-color:#3a3a3a;">
                    <img class="card-img-top" src="/<%=@night[i]%>.png" alt="Card image cap">
-                     <div class="card-body">
+                     <div class="card-body" style="padding:0px">
                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@night[i]%>">상세정보</button>
                     </div>
                   </div>
@@ -227,9 +227,9 @@
             <!--밤 이후 -->
             <div class="night2"  style="display:none;">
            <%for i in 0..3 %>
-                <div class="card">
+                <div class="card" style="background-color:#3a3a3a">
                    <img class="card-img-top" src="/<%=@night1[i]%>.png" alt="Card image cap">
-                     <div class="card-body">
+                     <div class="card-body" style="padding:0px">
                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@night1[i]%>">상세정보</button>
                     </div>
                   </div>
