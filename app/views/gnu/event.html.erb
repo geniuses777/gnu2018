@@ -101,17 +101,9 @@
     </style>
   </head>
   <body>
-    <header class="masthead" style="height:280px; background-color: #110a0a;">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading" style='text-shadow: 1px 1px 5px #000;'>
-              <img src="<%=asset_path('header_event.jpg')%>">
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header class="masthead">
+      <img src="<%=asset_path('header_event.jpg')%>" width="100%">
+</header>
     
     <div class="head">
       <h3 style="font-size:2em; font-family: 'Gamja Flower', cursive;">낮밤 아이콘을 클릭해보세요! 다시 누르면 원상복귀됩니다!</h3>
@@ -194,7 +186,7 @@
           </div>
           <!--밤-->
           <div id="moon" class="col-md-6" style="background-image: url(<%=asset_path('star1.jpg')%>)">
-            <img class="night" src="/night.jpg" />
+            <img class="night" src="/night.png" />
             <br>
             <h2 style="text-align:center; font-family: 'Cute Font', cursive; color:white">상시- 디스코 팡팡, 야시장(야외공연장)</h2>
             <!--밤 이전 -->
