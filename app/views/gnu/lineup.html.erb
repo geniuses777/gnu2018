@@ -1,6 +1,8 @@
 <style>
   .head>h1{
         text-align:center;
+        margin-top:4%;
+        margin-bottom:4%;
       }
   
 	.w-100{
@@ -9,6 +11,11 @@
        Height: 100%;
        float:right;
 	}
+	.day{
+	  margin-left:10%;
+	  width:80%;
+	  Height:100%;
+	}
   
   
 </style>
@@ -16,16 +23,8 @@
  $('.carousel').carousel('pause');
 </script>
 
-<header class="masthead" style="height:280px; background-color: #110a0a;">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="site-heading">
-          <img src="<%=asset_path('header_lineup')%>">
-        </div>
-      </div>
-    </div>
-  </div>
+<header class="masthead">
+      <img src="<%=asset_path('header_lineup.jpg')%>" width="100%">
 </header>
 
     <div class="head">
@@ -37,22 +36,18 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div>
-        <img class="d-block w-100" src="<%=asset_path('schedule1.jpg')%>" alt="First slide">
+        <img class="d-block w-100" src="<%=asset_path('yoon.jpg')%>" alt="First slide">
         <img class="d-block w-100" src="<%=asset_path('suji.png')%>" alt="Second slide">
         </div>
       </div>
       <div class="carousel-item">
         <div>
-        <img class="d-block w-100" src="<%=asset_path('schedule2.jpg')%>" alt="First slide">
-        <img class="d-block w-100" src="<%=asset_path('suji.png')%>" alt="Second slide">
+
+        <img class="day" src="<%=asset_path('3.jpg')%>" alt="First slide">
+
         </div>
       </div>
-      <div class="carousel-item">
-        <div>
-        <img class="d-block w-100" src="<%=asset_path('schedule3.jpg')%>" alt="First slide">
-        <img class="d-block w-100" src="<%=asset_path('suji.png')%>" alt="Second slide">
-        </div>
-      </div>
+     
     </div>
     
     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -79,16 +74,10 @@
       </div>
       <div class="carousel-item">
         <div>
-        <img class="d-block w-100" src="<%=asset_path('yoon.jpg')%>" alt="First slide">
-        <img class="d-block w-100" src="<%=asset_path('suji.png')%>" alt="Second slide">
+        <img class="day" src="<%=asset_path('2.jpg')%>" alt="First slide">
         </div>
       </div>
-      <div class="carousel-item">
-        <div>
-        <img class="d-block w-100" src="<%=asset_path('yoon.jpg')%>" alt="First slide">
-        <img class="d-block w-100" src="<%=asset_path('suji.png')%>" alt="Second slide">
-        </div>
-      </div>
+      
     </div>
     
     <a class="carousel-control-prev" href="#carouselExampleFade1" role="button" data-slide="prev">
@@ -115,14 +104,7 @@
       </div>
       <div class="carousel-item">
         <div>
-        <img class="d-block w-100" src="<%=asset_path('suji.png')%>" alt="First slide">
-        <img class="d-block w-100" src="<%=asset_path('yoon.jpg')%>" alt="Second slide">
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div>
-        <img class="d-block w-100" src="<%=asset_path('yoon.jpg')%>" alt="First slide">
-        <img class="d-block w-100" src="<%=asset_path('suji.png')%>" alt="Second slide">
+        <img class="day" src="<%=asset_path('1.jpg')%>" alt="First slide">
         </div>
       </div>
     </div>
