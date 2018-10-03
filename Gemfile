@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+ource 'https://rubygems.org'
 gem 'rails_db'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
