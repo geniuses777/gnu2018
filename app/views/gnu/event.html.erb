@@ -63,7 +63,7 @@
         .card{
           border:double;
           border-width:10px;
-          border-color:green;
+          border-color:#81C784;
           height: 20em;
           margin-right:0.8em;
           margin-bottom: 2em;
@@ -71,11 +71,11 @@
         }
         .dayday1{
           width: 95%;
-          margin: 2em auto;
+          margin: 1em auto;
         }
         .night1{
           width: 95%;
-          margin: 2em auto;
+          margin: 1em auto;
         }
         .dayday2{
           margin: 2em;
@@ -94,6 +94,9 @@
           font-size: 1.2em;
           background-color: #42A5F5;
           border-color: #42A5F5;
+        }
+        h3.modal-title{
+          font-family: 'Gugi', cursive;
         }
     </style>
   </head>
@@ -120,6 +123,8 @@
         <div class="row" style="margin-right:0px; margin-left:0px">
           <div id="sun" class="col-md-6">
             <img class="dayday" src="/noon.jpg" />
+            <br>
+            <h2 style="text-align:center; font-family: 'Cute Font', cursive;">상시- 경상대 개척인 스포츠 대전, 좀비를 잡아라</h2>
             <!--낮 이전 -->
             <div class="dayday1">
               
@@ -137,7 +142,7 @@
                   <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"><h2><%=@nooname[i]%></h2></h5>
+                        <h3 class="modal-title" id="exampleModalLabel"><%=@nooname[i]%></h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true"></span>
                         </button>
@@ -170,7 +175,7 @@
                   <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"><h2><%=@noon1name[i]%></h2></h5>
+                        <h3 class="modal-title" id="exampleModalLabel"><%=@noon1name[i]%></h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true"></span>
                         </button>
@@ -191,6 +196,8 @@
           <!--밤-->
           <div id="moon" class="col-md-6" style="background-image: url(<%=asset_path('star1.jpg')%>)">
             <img class="night" src="/night.jpg" />
+            <br>
+            <h2 style="text-align:center; font-family: 'Cute Font', cursive; color:white">상시- 디스코 팡팡, 야시장(야외공연장)</h2>
             <!--밤 이전 -->
             <div class="night1">
            <%for i in 0..3 %>
@@ -207,7 +214,7 @@
                   <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"><h2><%=@nightname[i]%></h2></h5>
+                        <h3 class="modal-title" id="exampleModalLabel"><%=@nightname[i]%></h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true"></span>
                         </button>
@@ -240,7 +247,7 @@
                   <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"><h2><%=@night1name[i]%></h2></h5>
+                        <h3 class="modal-title" id="exampleModalLabel"><%=@night1name[i]%></h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true"></span>
                         </button>

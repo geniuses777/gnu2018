@@ -1,28 +1,10 @@
 Rails.application.routes.draw do
    root 'gnu#index'
 
-  #get '/lineup' => 'gnu#lineup'
+  get '/lineup' => 'gnu#lineup'
   get '/event'=>'gnu#event'
-  get '/eat'=>'gnu#eat'
+  #get '/eat'=>'gnu#eat'
   get '/bus'=>'gnu#bus'
-  
-   get '/popup/1'=>"popup#1"
-   get '/popup/2'=>"popup#2"
-   get '/popup/3'=>"popup#3"
-   get '/popup/4'=>"popup#4"
-   get '/popup/5'=>"popup#5"
-   get '/popup/6'=>"popup#6"
-   
-   get '/popup/7'=>"popup#7"
-   get '/popup/8'=>"popup#8"
-   get '/popup/9'=>"popup#9"
-   get '/popup/10'=>"popup#10"
-   get '/popup/11'=>"popup#11"
-   get '/popup/12'=>"popup#12"
-   get '/popup/13'=>"popup#13"
-   get '/popup/14'=>"popup#14"
-   
-   get '/popup/111'=>"popup#111"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

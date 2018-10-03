@@ -2,6 +2,8 @@
 <html>
 <head>
   <!--글씨체-->
+  <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet"> 
@@ -29,9 +31,9 @@
       <a class="navbar-brand" href="/"><img src="<%=asset_path('logo.png')%>" width="190px"></a>
     	<ul class="top_menu ac">
     		<li><a class="nav-link <%=((controller.action_name=='index') ? 'active' : '')%>" href="/"><img src="<%=asset_path('Menu_home.png')%>" width="50px"></a></li>
-    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/event"><img src="<%=asset_path('Menu_event.png')%>" width="65px"></a></li>
-    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/eat"><img src="<%=asset_path('Menu_lineup.png')%>" width="95px"></a></li>
-    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/bus"><img src="<%=asset_path('Menu_bus.png')%>" width="60px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='event') ? 'active' : '')%>" href="/event"><img src="<%=asset_path('Menu_event.png')%>" width="65px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/lineup"><img src="<%=asset_path('Menu_lineup.png')%>" width="95px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='bus') ? 'active' : '')%>" href="/bus"><img src="<%=asset_path('Menu_bus.png')%>" width="60px"></a></li>
     	</ul>
     </div>
   </nav>
