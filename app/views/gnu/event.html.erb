@@ -63,7 +63,7 @@
         .card{
           border:double;
           border-width:10px;
-          border-color:#81C784;
+          border-color:#c7c6cc;
           height: 20em;
           margin-right:0.8em;
           margin-bottom: 2em;
@@ -113,7 +113,7 @@
       <div class="intro">
         <div class="row" style="margin-right:0px; margin-left:0px">
           <div id="sun" class="col-md-6">
-            <img class="dayday" src="/noon.jpg" />
+            <img class="dayday" src="/noon.png">
             <br>
             <h2 style="text-align:center; font-family: 'Cute Font', cursive;">상시- 경상대 개척인 스포츠 대전, 좀비를 잡아라</h2>
             <!--낮 이전 -->
@@ -192,7 +192,7 @@
             <!--밤 이전 -->
             <div class="night1">
            <%for i in 0..3 %>
-                <div class="card" style="background-color:#3a3a3a;">
+                <div class="card" style="background-color:#242d4e;">
                    <img class="card-img-top" src="/<%=@night[i]%>.png" alt="Card image cap">
                      <div class="card-body" style="padding:0px">
                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@night[i]%>">상세정보</button>
