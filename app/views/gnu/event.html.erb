@@ -113,7 +113,7 @@
       <div class="intro">
         <div class="row" style="margin-right:0px; margin-left:0px">
           <div id="sun" class="col-md-6">
-            <img class="dayday" src="/noon.jpg" />
+            <img class="dayday" src="/noon.png" />
             <br>
             <h2 style="text-align:center; font-family: 'Cute Font', cursive;">상시- 경상대 개척인 스포츠 대전, 좀비를 잡아라</h2>
             <!--낮 이전 -->
@@ -130,7 +130,7 @@
                 <!-- Modal -->
                 <%for i in 0..3 %>
                 <div class="modal fade" id="exampleModal<%=@noon[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
+                  <div class="modal-dialog modal-lg modal-rg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h3 class="modal-title" id="exampleModalLabel"><%=@nooname[i]%></h3>
@@ -163,7 +163,7 @@
                 <!-- Modal -->
                 <%for i in 0..1 %>
                 <div class="modal fade" id="exampleModal<%=@noon1[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
+                  <div class="modal-dialog modal-lg"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h3 class="modal-title" id="exampleModalLabel"><%=@noon1name[i]%></h3>
@@ -202,7 +202,7 @@
                 <!-- Modal -->
                 <%for i in 0..3 %>
                 <div class="modal fade" id="exampleModal<%=@night[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
+                  <div class="modal-dialog modal-lg"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h3 class="modal-title" id="exampleModalLabel"><%=@nightname[i]%></h3>
@@ -235,7 +235,7 @@
                 <!-- Modal -->
                 <%for i in 0..3 %>
                 <div class="modal fade" id="exampleModal<%=@night1[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
+                  <div class="modal-dialog modal-lg"  style ="width:800px;, height:800px;" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h3 class="modal-title" id="exampleModalLabel"><%=@night1name[i]%></h3>
@@ -254,6 +254,7 @@
                   </div>
                 </div>
                 <%end%>
+
             </div>
           </div>
         </div>
