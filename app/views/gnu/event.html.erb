@@ -1,288 +1,243 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+    .w3-third img:hover{opacity: 1}
+  </style>
+  <body class="w3-light-grey w3-content" style="max-width:1600px">
+  <!-- Page Header -->
+  <header class="masthead">
+        <img src="<%=asset_path('header_event.jpg')%>" width="100%">
+  </header>
+  <!-- Sidebar/menu
+  <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+    <h3 class="w3-padding-64 w3-center"><b>SOME<br>NAME</b></h3>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  </nav>
+  -->
+  <!-- Top menu on small screens
+  <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+    <span class="w3-left w3-padding">SOME NAME</span>
+    <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+  </header>
+   -->
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main">
+  
+    <!-- Push down content on small screens --> 
+    <div class="w3-hide-large" style="margin-top:83px"></div>
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!--<link rel="stylesheet" type="text/css" href="assets/stylesheets/owl.carousel.min.css">-->
-    <!--<script type="text/javascript" src="assets/javascripts/jquery.min.js"></script> 
-    <script type="text/javascript" src="assets/javascripts/owl.carousel.min.js"></script> 
-    
- 
- 
-    <link rel="stylesheet" type="text/css" href="assets/stylesheets/sidebar.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="assets/javascripts/sidebar.js"></script>-->
- 
-    
-
-    <style>
-        img.dayday{
-          display: block;
-          width: 70%;
-          margin: 0 auto;
-        }
+    <!-- Photo grid -->
+    <div class="w3-row">
+      <div class="w3-third">
+        <img src="/bubble.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+        <img src="/fight.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+        <img src="/freemarket.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+      </div>
+  
+      <div class="w3-third">
+        <img src="/fun.jpg" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+        <img src="/ghost.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+        <img src="/photozone.jpg" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+      </div>
       
-        img.night{
-          display: block;
-          width: 70%;
-          margin: 0 auto;
-        }
-        
-        .col-md-12 img.itemDY{
-          display: block;
-          margin-right:3.3%;
-          width: 20%;
-          float:right;
-        }
-      
-      .col-md-6 img.itemDY{
-        display: block;
-        margin-right:3.3%;
-        width: 45%;
-        float:right;
-      }
-      .head{
-        margin:1.4em;
-      }
-      .head>h3{
-        text-align:center;
-      }
-	     .owl-carousel .owl-item img.ddd{
-	       display: block;
-	       margin-right:3.3%;
-         width: 45%;
-         Height: 100%;
-         float:right;
-	     }
-       .card-text{
-         text-align:center;
-       }
-        .card{
-          border:double;
-          border-width:10px;
-          border-color:#c7c6cc;
-          height: 20em;
-          margin-right:0.8em;
-          margin-bottom: 2em;
-          float: left;
-        }
-        .dayday1{
-          width: 95%;
-          margin: 1em auto;
-        }
-        .night1{
-          width: 95%;
-          margin: 1em auto;
-        }
-        .dayday2{
-          margin: 2em;
-        }
-        .night2{
-          margin: 2em;
-        }
-        .card>img.card-img-top{
-          width:15.5em;
-          height: 15em;
-        }
-        .card-body>.btn{
-          margin: 0 auto;
-          display: block;
-          font-family: 'Hi Melody', cursive;
-          font-size: 1.2em;
-          background-color: #42A5F5;
-          border-color: #42A5F5;
-        }
-        h3.modal-title{
-          font-family: 'Gugi', cursive;
-        }
-    </style>
-  </head>
-  <body>
-    <header class="masthead">
-      <img src="<%=asset_path('header_event.jpg')%>" width="100%">
-</header>
-    
-    <div class="head">
-      <h3 style="font-size:2em; font-family: 'Gamja Flower', cursive;">낮밤 아이콘을 클릭해보세요! 다시 누르면 원상복귀됩니다!</h3>
+      <div class="w3-third">
+        <img src="/clubfestival.jpg" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
+        <img src="/depang.jpg" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
+        <img src="/edmparty.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful day!">
+      </div>
     </div>
+  
+    <!-- Pagination 
+    <div class="w3-center w3-padding-32">
+      <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+        <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      </div>
+    </div>
+    -->
     
-    <div class="section">
-      <div class="intro">
-        <div class="row" style="margin-right:0px; margin-left:0px">
-          <div id="sun" class="col-md-6">
-            <img class="dayday" src="/noon.png">
-            <br>
-            <h2 style="text-align:center; font-family: 'Cute Font', cursive;">상시- 경상대 개척인 스포츠 대전, 좀비를 잡아라</h2>
-            <!--낮 이전 -->
-            <div class="dayday1">
-              
-              <%for i in 0..3 %>
-                <div class="card">
-                   <img class="card-img-top" src="/<%=@noon[i]%>.png" alt="Card image cap">
-                     <div class="card-body" style="padding:0px">
-                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@noon[i]%>">상세정보</button>
-                    </div>
-                  </div>
-                <%end%>
-                <!-- Modal -->
-                <%for i in 0..3 %>
-                <div class="modal fade" id="exampleModal<%=@noon[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h3 class="modal-title" id="exampleModalLabel"><%=@nooname[i]%></h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true"></span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                         <img class="card-img-top" src="/a<%=@noon[i]%>.png"  alt="Card image cap">
-                         <h2></h2>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <%end%>
-            </div>
-            <!--낮 이후 -->
-            <div class="dayday2" style="display:none">
-             <%for i in 0..1 %>
-                <div class="card">
-                   <img class="card-img-top" src="/<%=@noon1[i]%>.png" alt="Card image cap">
-                     <div class="card-body" style="padding:0px">
-                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@noon1[i]%>">상세정보</button>
-                    </div>
-                  </div>
-                <%end%>
-                <!-- Modal -->
-                <%for i in 0..1 %>
-                <div class="modal fade" id="exampleModal<%=@noon1[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h3 class="modal-title" id="exampleModalLabel"><%=@noon1name[i]%></h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true"></span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                         <img class="card-img-top" src="/<%=@noon1a[i]%>.png"  alt="Card image cap">
-                         <h2></h2>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <%end%>
-            </div>
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+  
+    <!-- About section 
+    <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+      <h4><b>About Me</b></h4>
+      <img src="/w3images/avatar_hat.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+      <div class="w3-content w3-justify" style="max-width:600px">
+        <h4>My Name</h4>
+        <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>mail: example@example.com</p>
+        <p>tel: 5353 35531</p>
+        <hr class="w3-opacity">
+        <h4 class="w3-padding-16">Technical Skills</h4>
+        <p class="w3-wide">Photography</p>
+        <div class="w3-white">
+          <div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%">95%</div>
+        </div>
+        <p class="w3-wide">Web Design</p>
+        <div class="w3-white">
+          <div class="w3-container w3-padding-small w3-center w3-grey" style="width:85%">85%</div>
+        </div>
+        <p class="w3-wide">Photoshop</p>
+        <div class="w3-white">
+          <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
+        </div>
+        <p><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button></p>
+        <hr class="w3-opacity">
+  
+        <h4 class="w3-padding-16">How much I charge</h4>
+        <div class="w3-row-padding" style="margin:0 -16px">
+          <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+              <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+              <li class="w3-padding-16">Web Design</li>
+              <li class="w3-padding-16">Photography</li>
+              <li class="w3-padding-16">5GB Storage</li>
+              <li class="w3-padding-16">Mail Support</li>
+              <li class="w3-padding-16">
+                <h2>$ 10</h2>
+                <span class="w3-opacity">per month</span>
+              </li>
+              <li class="w3-light-grey w3-padding-24">
+                <button class="w3-button w3-white w3-padding-large">Sign Up</button>
+              </li>
+            </ul>
           </div>
-          <!--밤-->
-          <div id="moon" class="col-md-6" style="background-image: url(<%=asset_path('star1.jpg')%>)">
-            <img class="night" src="/night.png" />
-            <br>
-            <h2 style="text-align:center; font-family: 'Cute Font', cursive; color:white">상시- 디스코 팡팡, 야시장(야외공연장)</h2>
-            <!--밤 이전 -->
-            <div class="night1">
-           <%for i in 0..3 %>
-                <div class="card" style="background-color:#242d4e;">
-                   <img class="card-img-top" src="/<%=@night[i]%>.png" alt="Card image cap">
-                     <div class="card-body" style="padding:0px">
-                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@night[i]%>">상세정보</button>
-                    </div>
-                  </div>
-                <%end%>
-                <!-- Modal -->
-                <%for i in 0..3 %>
-                <div class="modal fade" id="exampleModal<%=@night[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h3 class="modal-title" id="exampleModalLabel"><%=@nightname[i]%></h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true"></span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                         <img class="card-img-top" src="/<%=@nighta[i]%>.png"  alt="Card image cap">
-                         <h2></h2>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <%end%>
-            </div>
-            <!--밤 이후 -->
-            <div class="night2"  style="display:none;">
-           <%for i in 0..3 %>
-                <div class="card" style="background-color:#3a3a3a">
-                   <img class="card-img-top" src="/<%=@night1[i]%>.png" alt="Card image cap">
-                     <div class="card-body" style="padding:0px">
-                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%=@night1[i]%>">상세정보</button>
-                    </div>
-                  </div>
-                <%end%>
-                <!-- Modal -->
-                <%for i in 0..3 %>
-                <div class="modal fade" id="exampleModal<%=@night1[i]%>"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog"  style ="width:800px;, height:800px;" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h3 class="modal-title" id="exampleModalLabel"><%=@night1name[i]%></h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true"></span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                         <img class="card-img-top" src="/<%=@night1a[i]%>.png"  alt="Card image cap">
-                         <h2></h2>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <%end%>
-            </div>
+          
+          <div class="w3-half">
+            <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+              <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+              <li class="w3-padding-16">Web Design</li>
+              <li class="w3-padding-16">Photography</li>
+              <li class="w3-padding-16">50GB Storage</li>
+              <li class="w3-padding-16">Endless Support</li>
+              <li class="w3-padding-16">
+                <h2>$ 25</h2>
+                <span class="w3-opacity">per month</span>
+              </li>
+              <li class="w3-light-grey w3-padding-24">
+                <button class="w3-button w3-white w3-padding-large">Sign Up</button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  </body>
-  <script>
-    $(".dayday").click(function(){
-      $('#sun').toggleClass('col-md-6');
-      $('#sun').toggleClass('col-md-12');
-      if($(".dayday2").css("display") == "none"){   
-        $('.dayday2').show();
-        $('#moon').hide();
-    } else {  
-        $('.dayday2').hide();
-        $('#moon').show();
-    }
-    });
+    -->
+    <!-- Contact section 
+    <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+      <div class="w3-content" style="max-width:600px">
+        <h4 class="w3-center"><b>Contact Me</b></h4>
+        <p>Do you want me to photograph you? Fill out the form and fill me in with the details :) I love meeting new people!</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-section">
+            <label>Name</label>
+            <input class="w3-input w3-border" type="text" name="Name" required>
+          </div>
+          <div class="w3-section">
+            <label>Email</label>
+            <input class="w3-input w3-border" type="text" name="Email" required>
+          </div>
+          <div class="w3-section">
+            <label>Message</label>
+            <input class="w3-input w3-border" type="text" name="Message" required>
+          </div>
+          <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+        </form>
+      </div>
+    </div>
+    -->
+    <!-- Footer 
+    <footer class="w3-container w3-padding-32 w3-grey">  
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <h3>INFO</h3>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>      
+        </div>
+      
+        <div class="w3-third">
+          <h3>BLOG POSTS</h3>
+          <ul class="w3-ul">
+            <li class="w3-padding-16 w3-hover-black">
+              <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Lorem</span><br>
+              <span>Sed mattis nunc</span>
+            </li>
+            <li class="w3-padding-16 w3-hover-black">
+              <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Ipsum</span><br>
+              <span>Praes tinci sed</span>
+            </li> 
+          </ul>
+        </div>
+        -->
+        <!--
+        <div class="w3-third">
+          <h3>POPULAR TAGS</h3>
+          <p>
+            <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
+            <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
+            <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
+            <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
+            <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+          </p>
+        </div>
+      </div>
+    </footer>
     
-    $(".night").click(function(){
-      $('#moon').toggleClass('col-md-6');
-      $('#moon').toggleClass('col-md-12');
-      if($(".night2").css("display") == "none"){ 
-        $('.night2').show();
-        $('#sun').hide();
-    } else {  
-        $('.night2').hide();
-        $('#sun').show();
-    }
-    });
-    </script>
+    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+    -->
+  <!-- End page content -->
+  </div>
+  
+  <script>
+  // Script to open and close sidebar
+  function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+  }
+   
+  function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+  }
+  
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  
+  </script>
+  
+  
+  </body>
 </html>
