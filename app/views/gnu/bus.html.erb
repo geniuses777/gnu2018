@@ -1,13 +1,7 @@
 <style>
   .wrapper{
     width:100%;
-  }
-  .wrapper>.picture{
-    width:50%;
-    float:left;
-  }
-  .wrapper>.picture>img{
-    width:100%;
+    background-color:#110909;
   }
 	@media  screen and (max-width: 500px) {
     header.masthead{
@@ -33,6 +27,7 @@
 
 
 <body>
+  <div class="wrapper">
   <div class="container">
     <div class="row">
         <div class ="bustime_1">
@@ -40,6 +35,7 @@
           <img src="<%=asset_path('finalbus_2.jpg')%>" width ="100%">
         </div>
     </div>
+  </div>
   </div>
 </body>
 
