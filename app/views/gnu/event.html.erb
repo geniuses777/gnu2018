@@ -15,13 +15,18 @@
     .w3-third>.image>.text>h2{font-family: 'Gamja Flower', cursive; font-size:4em;}
     @media  screen and (max-width: 500px) {
     header.masthead{
-      padding-top:2.5em;
-      background-color:#110909;
+      padding-top:3.3em;
+      background-color:#420e0e;
     }
     header.masthead img{
-      height:8em;
+      height:8.8em;
     }
 	}
+		.picturesize{
+	  width:500px;
+	  height:500px;
+	}
+
   </style>
   <body class="w3-light-grey w3-content" style="max-width:1600px">
   <!-- Page Header -->
@@ -104,8 +109,7 @@
         <div class="image">
           <img src="/freemarket.jpg" style="width:100%" onclick="onClick(this)" alt="플리마켓">
           <div class="text"><h2>플리마켓</h2></div>
-        </div>
-        <div class="image">
+        </div><div class="image">
           <img src="/clubfestival.jpg" style="width:100%" onclick="onClick(this)" alt="동아리 초청공연">
           <div class="text"><h2>동아리 초청공연</h2></div>
         </div>
@@ -117,11 +121,8 @@
           <img src="/mrman.jpg" style="width:100%" onclick="onClick(this)" alt="Mr.개척">
           <div class="text"><h2>Mr.개척</h2></div>
         </div>
-        <div class="image">
-          <img src="/mrman.jpg" style="width:100%" onclick="onClick(this)" alt="미니게임천국">
-          <div class="text"><h2>미니게임천국</h2></div>
-        </div>
       </div>
+      
     </div>
   
     <!-- Pagination 
@@ -136,15 +137,17 @@
       </div>
     </div>
     -->
-    
+    <%for i in 0..13%>
     <!-- Modal for full size images on click모달모달모달모달모달모달-->
-    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <div id="modal0<%=@per%>" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
       <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
       <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
         <img id="img01" class="w3-image">
+        <img class = "picturesize" src="/<%=@per1%>.jpg">
         <p id="caption"></p>
       </div>
     </div>
+    <%end%>
   
     <!-- About section 
     <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
@@ -293,13 +296,13 @@
   }
   
   // Modal Image Gallery
+<%for i in 0..13%>
   function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
+    document.getElementById("modal0<%=@per%>").style.display = "block";
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
   }
-  
+  <%end%>
   </script>
   
   
