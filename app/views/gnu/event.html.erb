@@ -22,6 +22,11 @@
       height:8.8em;
     }
 	}
+		.picturesize{
+	  width:500px;
+	  height:500px;
+	}
+
   </style>
   <body class="w3-light-grey w3-content" style="max-width:1600px">
   <!-- Page Header -->
@@ -71,6 +76,10 @@
           <img src="/jombe.jpg" style="width:100%" onclick="onClick(this)" alt="좀비를 버텨랴">
           <div class="text"><h2>좀비를 버텨라</h2></div>
         </div>
+        <div class="image">
+          <img src="/singsurvive.jpg" style="width:100%" onclick="onClick(this)" alt="개척가요제">
+          <div class="text"><h2>개척가요제</h2></div>
+        </div>
       </div>
   
       <div class="w3-third">
@@ -89,6 +98,10 @@
         <div class="image">
           <img src="/movie.jpg" style="width:100%" onclick="onClick(this)" alt="무대 돗자리 관람">
           <div class="text"><h2>무대 돗자리 관람</h2></div>
+        </div>
+        <div class="image">
+          <img src="/foodtruck.jpg" style="width:100%" onclick="onClick(this)" alt="푸드트럭">
+          <div class="text"><h2>푸드트럭</h2></div>
         </div>
       </div>
 
@@ -124,15 +137,17 @@
       </div>
     </div>
     -->
-    
+    <%for i in 0..13%>
     <!-- Modal for full size images on click모달모달모달모달모달모달-->
-    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <div id="modal0<%=@per%>" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
       <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
       <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
         <img id="img01" class="w3-image">
+        <img class = "picturesize" src="/<%=@per1%>.jpg">
         <p id="caption"></p>
       </div>
     </div>
+    <%end%>
   
     <!-- About section 
     <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
@@ -281,13 +296,13 @@
   }
   
   // Modal Image Gallery
+<%for i in 0..13%>
   function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
+    document.getElementById("modal0<%=@per%>").style.display = "block";
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
   }
-  
+  <%end%>
   </script>
   
   
