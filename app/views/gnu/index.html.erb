@@ -53,7 +53,11 @@
 		}
 		.intro img{
 			width:13em;
-			height:9em;
+			height:10em;
+		}
+		.main img{
+			width:15em;
+			height:7em;
 		}
 	}
 </style>
@@ -80,19 +84,21 @@
 
 <div class="main_events">
 	<div class="section main_master">
-		<img src="<%=asset_path('Menu_logo.png')%>" width="50%">
+		<div class="main">
+			<img src="<%=asset_path('Menu_logo.png')%>" width="50%">
+		</div>
 	</div>
 	<div class="section man_contest" style="background-image:url(<%=asset_path('audience-1850665_1280.jpg')%>)">
 		<div class="intro">
 			<img src="<%=asset_path('Day1.png')%>" width="50%">
 		</div>
 	</div>
-	<div class="section scare" style="background-image:url(<%=asset_path('Day2_background1.jpg')%>)">
+	<div class="section scare" style="background-image:url(<%=asset_path('concert-768722_1280.jpg')%>)">
 		<div class="intro">
 			<img src="<%=asset_path('Day2.png')%>" width="50%">
 		</div>
 	</div>
-	<div class="section singer_contest" style="background-image:url(<%=asset_path('concert-768722_1280.jpg')%>)">
+	<div class="section singer_contest" style="background-image:url(<%=asset_path('Day2_background1.jpg')%>)">
 		<div class="intro">
 			<img src="<%=asset_path('Day3.png')%>" width="50%">
 		</div>
