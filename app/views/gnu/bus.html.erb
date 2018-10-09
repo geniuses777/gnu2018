@@ -9,27 +9,37 @@
   .wrapper>.picture>img{
     width:100%;
   }
+	@media  screen and (max-width: 500px) {
+    header.masthead{
+      padding-top:2.5em;
+      background-color:#420e0e;
+    }
+    header.masthead img{
+      height:6.5em;
+    }
+	}
 </style>
 <!-- Page Header -->
 <header class="masthead">
       <img src="<%=asset_path('header_bus.jpg')%>" width="100%">
 </header>
+<!--
 <div class="wrapper">
   <div class="picture"><img src="<%=asset_path('finalbus_1.jpg')%>"></div>
   <div class="picture"><img src="<%=asset_path('finalbus_2.jpg')%>"></div>
 </div>
+-->
 
 
 
-
-<!--<body style="background-color: #110a0a;">
+<body>
   <div class="container">
     <div class="row">
-        <div class ="bustime_1" style="height:1000px; float:left; margin-left:10%">
-          <img src="<%=asset_path('finalbus_1.jpg')%>" width="80%">
-          <img src="<%=asset_path('finalbus_2.jpg')%>" width ="80%">
+        <div class ="bustime_1">
+          <img src="<%=asset_path('finalbus_1.jpg')%>" width="100%">
+          <img src="<%=asset_path('finalbus_2.jpg')%>" width ="100%">
         </div>
     </div>
   </div>
-</body>-->
+</body>
 

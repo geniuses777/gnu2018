@@ -23,17 +23,27 @@
   
     gtag('config', 'UA-108031331-1');
   </script>
+  <style>
+    @media  screen and (max-width: 500px) {
+      .navbar-brand img{
+        width:120px;
+      }
+		  .nav-link img{
+		    width:40px;
+		  }
+		}
+  </style>
 </head>
 <body>
 	<!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="/"><img src="<%=asset_path('logo.png')%>" width="190px"></a>
+    <div class="container" style="padding-right:0px; padding-left:0px">
+      <a class="navbar-brand" href="/"><img src="<%=asset_path('logo.png')%>" width="140px"></a>
     	<ul class="top_menu ac">
     		<li><a class="nav-link <%=((controller.action_name=='index') ? 'active' : '')%>" href="/"><img src="<%=asset_path('Menu_home.png')%>" width="50px"></a></li>
-    		<li><a class="nav-link <%=((controller.action_name=='event') ? 'active' : '')%>" href="/event"><img src="<%=asset_path('Menu_event.png')%>" width="65px"></a></li>
-    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/lineup"><img src="<%=asset_path('Menu_lineup.png')%>" width="175px"></a></li>
-    		<li><a class="nav-link <%=((controller.action_name=='bus') ? 'active' : '')%>" href="/bus"><img src="<%=asset_path('Menu_bus.png')%>" width="60px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='event') ? 'active' : '')%>" href="/event"><img src="<%=asset_path('Menu_event.png')%>" width="50px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='lineup') ? 'active' : '')%>" href="/lineup"><img src="<%=asset_path('Menu_event.png')%>" width="50px"></a></li>
+    		<li><a class="nav-link <%=((controller.action_name=='bus') ? 'active' : '')%>" href="/bus"><img src="<%=asset_path('Menu_bus.png')%>" width="50px"></a></li>
     	</ul>
     </div>
   </nav>
@@ -41,7 +51,7 @@
 
 	<%= yield %>
 
- <!--
+ 
   <footer>
     <div class="container">
       <div class="row">
@@ -52,7 +62,7 @@
             		<img src="<%=asset_path('face_1.jpg')%>">
             	</div>
             	<div class="name">
-            		박지수
+            		김동걸
             	</div>
             </li>
             <li class="list-inline-item">
@@ -60,7 +70,7 @@
             		<img src="<%=asset_path('face_2.jpg')%>">
             	</div>
             	<div class="name">
-            		김태엽
+            		노현석
             	</div>
             </li>
             <li class="list-inline-item">
@@ -68,7 +78,7 @@
             		<img src="<%=asset_path('face_3.jpg')%>">
             	</div>
             	<div class="name">
-            		이혜원
+            		황윤하
             	</div>
             </li>
             <li class="list-inline-item">
@@ -80,13 +90,13 @@
             	</div>
             </li>
           </ul>
-          <p class="copyright text-muted">Copyright &copy; GNU LikeLion 2017</p>
+          <p class="copyright text-muted">Copyright &copy; GNU LikeLion 2018</p>
         </div>
       </div>
     </div>
   </footer>
   <div id="to_top" class="hidden" onclick="goto_up();"><img src="<%=asset_path('up_caret.png')%>"></div>
-  -->
+  
 </body>
 </html>
 
