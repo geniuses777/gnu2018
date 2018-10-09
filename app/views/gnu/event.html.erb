@@ -23,8 +23,8 @@
     }
 	}
 		.picturesize{
-	  width:500px;
-	  height:500px;
+	  width:600px;
+	  height:550px;
 	}
 
   </style>
@@ -65,61 +65,65 @@
           <div class="text"><h2>버블풋살</h2></div>
         </div>
         <div class="image">
-          <img src="/fun.jpg" style="width:100%" onclick="onClick(this)" alt="펀 아처리">
+          <img src="/fun.jpg" style="width:100%" onclick="onClick2(this)" alt="펀 아처리">
           <div class="text"><h2>펀 아처리</h2></div>
         </div>
         <div class="image">
-          <img src="/ghost.jpg" style="width:100%" onclick="onClick(this)" alt="귀신을 잡아라">
-          <div class="text"><h2>귀신을 잡아라</h2></div>
+          <img src="/ghost.jpg" style="width:100%" onclick="onClick5(this)" alt="귀신을 잡아라">
+          <div class="text"><h2>좀비을 잡아라</h2></div>
         </div>
         <div class="image">
-          <img src="/jombe.jpg" style="width:100%" onclick="onClick(this)" alt="좀비를 버텨랴">
+          <img src="/jombe.jpg" style="width:100%" onclick="onClick8(this)" alt="좀비를 버텨랴">
           <div class="text"><h2>좀비를 버텨라</h2></div>
         </div>
         <div class="image">
-          <img src="/singsurvive.jpg" style="width:100%" onclick="onClick(this)" alt="개척가요제">
+          <img src="/singsurvive.jpg" style="width:100%" onclick="onClick11(this)" alt="개척가요제">
           <div class="text"><h2>개척가요제</h2></div>
         </div>
       </div>
   
       <div class="w3-third">
         <div class="image">
-          <img src="/fight.jpg" style="width:100%" onclick="onClick(this)" alt="영산쇠머리 대기 시연회">
+          <img src="/fight.jpg" style="width:100%" onclick="onClick14(this)" alt="영산쇠머리 대기 시연회">
           <div class="text"><h2>영산쇠머리 대기</h2></div>
         </div>
         <div class="image">
-          <img src="/photozone.jpg" style="width:100%" onclick="onClick(this)" alt="포토존">
+          <img src="/photozone.jpg" style="width:100%" onclick="onClick3(this)" alt="포토존">
           <div class="text"><h2>포토존</h2></div>
         </div>
         <div class="image">
-          <img src="/depang.jpg" style="width:100%" onclick="onClick(this)" alt="디스코 팡팡">
+          <img src="/depang.jpg" style="width:100%" onclick="onClick6(this)" alt="디스코 팡팡">
           <div class="text"><h2>디스코 팡팡</h2></div>
         </div>
         <div class="image">
-          <img src="/movie.jpg" style="width:100%" onclick="onClick(this)" alt="무대 돗자리 관람">
+          <img src="/movie.jpg" style="width:100%" onclick="onClick9(this)" alt="무대 돗자리 관람">
           <div class="text"><h2>무대 돗자리 관람</h2></div>
         </div>
         <div class="image">
-          <img src="/foodtruck.jpg" style="width:100%" onclick="onClick(this)" alt="푸드트럭">
+          <img src="/foodtruck.jpg" style="width:100%" onclick="onClick12(this)" alt="푸드트럭">
           <div class="text"><h2>푸드트럭</h2></div>
         </div>
       </div>
 
       <div class="w3-third">
         <div class="image">
-          <img src="/freemarket.jpg" style="width:100%" onclick="onClick(this)" alt="플리마켓">
+          <img src="/freemarket.jpg" style="width:100%" onclick="onClick1(this)" alt="플리마켓">
           <div class="text"><h2>플리마켓</h2></div>
         </div><div class="image">
-          <img src="/clubfestival.jpg" style="width:100%" onclick="onClick(this)" alt="동아리 초청공연">
+          <img src="/clubfestival.jpg" style="width:100%" onclick="onClick4(this)" alt="동아리 초청공연">
           <div class="text"><h2>동아리 초청공연</h2></div>
         </div>
         <div class="image">
-          <img src="/edmparty.jpg" style="width:100%" onclick="onClick(this)" alt="EDM Party">
+          <img src="/edmparty.jpg" style="width:100%" onclick="onClick7(this)" alt="EDM Party">
           <div class="text"><h2>EDM Party</h2></div>
         </div>
         <div class="image">
-          <img src="/mrman.jpg" style="width:100%" onclick="onClick(this)" alt="Mr.개척">
+          <img src="/mrman.jpg" style="width:100%" onclick="onClick10(this)" alt="Mr.개척">
           <div class="text"><h2>Mr.개척</h2></div>
+        </div>
+        <div class="image">
+          <img src="/mini.jpg" style="width:100%" onclick="onClick13(this)" alt="Mr.개척">
+          <div class="text"><h2>미니 게임 천국</h2></div>
         </div>
       </div>
       
@@ -137,17 +141,128 @@
       </div>
     </div>
     -->
-    <%for i in 0..13%>
+   
     <!-- Modal for full size images on click모달모달모달모달모달모달-->
-    <div id="modal0<%=@per%>" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
       <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
       <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
         <img id="img01" class="w3-image">
-        <img class = "picturesize" src="/<%=@per1%>.jpg">
+        <img class = "picturesize" src="/a1.jpg">
         <p id="caption"></p>
       </div>
     </div>
-    <%end%>
+    <div id="modal03" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a3.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal04" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a4.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal05" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a5.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal06" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a6.png">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal07" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a7.png">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal08" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a8.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal09" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a9.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal010" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a10.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal011" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a11.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal012" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a12.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal013" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a13.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal014" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a14.png">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal015" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a15.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
+    <div id="modal016" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img03" class="w3-image">
+        <img class = "picturesize" src="/a16.jpg">
+        <p id="caption"></p>
+      </div>
+    </div>
   
     <!-- About section 
     <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
@@ -296,13 +411,84 @@
   }
   
   // Modal Image Gallery
-<%for i in 0..13%>
-  function onClick(element) {
-    document.getElementById("modal0<%=@per%>").style.display = "block";
+  
+   function onClick(aaa) {
+    document.getElementById("modal01").style.display = "block";
     var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
-  }
-  <%end%>
+    captionText.innerHTML = aaa.alt;
+   }
+   
+    function onClick1(aaa) {
+    document.getElementById("modal03").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+    function onClick2(aaa) {
+    document.getElementById("modal04").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+    function onClick3(aaa) {
+    document.getElementById("modal05").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+    function onClick4(aaa) {
+    document.getElementById("modal06").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+    function onClick5(aaa) {
+    document.getElementById("modal07").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+    function onClick6(aaa) {
+    document.getElementById("modal08").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+    function onClick7(aaa) {
+    document.getElementById("modal09").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+    function onClick8(aaa) {
+    document.getElementById("modal010").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+    function onClick9(aaa) {
+    document.getElementById("modal011").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+    function onClick10(aaa) {
+    document.getElementById("modal012").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+    function onClick11(aaa) {
+    document.getElementById("modal013").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+     function onClick12(aaa) {
+    document.getElementById("modal014").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+   function onClick13(aaa) {
+    document.getElementById("modal015").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+   function onClick14(aaa) {
+    document.getElementById("modal016").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = aaa.alt;
+   }
+
   </script>
   
   
