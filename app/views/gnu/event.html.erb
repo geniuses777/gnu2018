@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <title>W3.CSS Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <style>
     body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-    .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
-    .w3-third img:hover{opacity: 1}
+    .w3-third>.image>img{margin-bottom: -6px; opacity: 0.8; cursor: pointer; height:20em}
+    .w3-third>.image>img:hover{opacity: 1}
+    .w3-third>.image {position: relative; width:100%;}
+    .w3-third>.image:hover {opacity:1}
+    .w3-third>.image>.text{position:absolute; top:7em; width:100%; text-align:center;}
+    .w3-third>.image>.text>h2{font-family: 'Gamja Flower', cursive; font-size:4em;}
   </style>
   <body class="w3-light-grey w3-content" style="max-width:1600px">
   <!-- Page Header -->
@@ -42,28 +46,61 @@
     <!-- Photo grid -->
     <div class="w3-row">
       <div class="w3-third">
-        <img src="/bubble.jpg" style="width:100%" onclick="onClick(this)" alt="버블풋살">
-        <img src="/fun.jpg" style="width:100%" onclick="onClick(this)" alt="펀 아처리">
-        <img src="/ghost.jpg" style="width:100%" onclick="onClick(this)" alt="귀신을 잡아라">
+        <div class="image">
+          <img src="/bubble.jpg" style="width:100%" onclick="onClick(this)" alt="버블풋살">
+          <div class="text"><h2>버블풋살</h2></div>
+        </div>
+        <div class="image">
+          <img src="/fun.jpg" style="width:100%" onclick="onClick(this)" alt="펀 아처리">
+          <div class="text"><h2>펀 아처리</h2></div>
+        </div>
+        <div class="image">
+          <img src="/ghost.jpg" style="width:100%" onclick="onClick(this)" alt="귀신을 잡아라">
+          <div class="text"><h2>귀신을 잡아라</h2></div>
+        </div>
+        <div class="image">
+          <img src="/jombe.jpg" style="width:100%" onclick="onClick(this)" alt="좀비를 버텨랴">
+          <div class="text"><h2>좀비를 버텨라</h2></div>
+        </div>
       </div>
   
       <div class="w3-third">
-        <img src="/fight.jpg" style="width:100%" onclick="onClick(this)" alt="영산쇠머리 대기 시연회">
-        <img src="/photozone.jpg" style="width:100%" onclick="onClick(this)" alt="포토존">
-        <img src="/depang.jpg" style="width:100%" onclick="onClick(this)" alt="디스코 팡팡">
+        <div class="image">
+          <img src="/fight.jpg" style="width:100%" onclick="onClick(this)" alt="영산쇠머리 대기 시연회">
+          <div class="text"><h2>영산쇠머리 대기</h2></div>
+        </div>
+        <div class="image">
+          <img src="/photozone.jpg" style="width:100%" onclick="onClick(this)" alt="포토존">
+          <div class="text"><h2>포토존</h2></div>
+        </div>
+        <div class="image">
+          <img src="/depang.jpg" style="width:100%" onclick="onClick(this)" alt="디스코 팡팡">
+          <div class="text"><h2>디스코 팡팡</h2></div>
+        </div>
+        <div class="image">
+          <img src="/movie.jpg" style="width:100%" onclick="onClick(this)" alt="무대 돗자리 관람">
+          <div class="text"><h2>무대 돗자리 관람</h2></div>
+        </div>
       </div>
 
       <div class="w3-third">
-        <img src="/freemarket.jpg" style="width:100%" onclick="onClick(this)" alt="플리마켓">
-        <img src="/clubfestival.jpg" style="width:100%" onclick="onClick(this)" alt="동아리 초청공연">
-        <img src="/edmparty.jpg" style="width:100%" onclick="onClick(this)" alt="EDM Party">
+        <div class="image">
+          <img src="/freemarket.jpg" style="width:100%" onclick="onClick(this)" alt="플리마켓">
+          <div class="text"><h2>플리마켓</h2></div>
+        </div><div class="image">
+          <img src="/clubfestival.jpg" style="width:100%" onclick="onClick(this)" alt="동아리 초청공연">
+          <div class="text"><h2>동아리 초청공연</h2></div>
+        </div>
+        <div class="image">
+          <img src="/edmparty.jpg" style="width:100%" onclick="onClick(this)" alt="EDM Party">
+          <div class="text"><h2>EDM Party</h2></div>
+        </div>
+        <div class="image">
+          <img src="/mrman.jpg" style="width:100%" onclick="onClick(this)" alt="Mr.개척">
+          <div class="text"><h2>Mr.개척</h2></div>
+        </div>
       </div>
       
-      <div class="w3-third">
-        <img src="/jombe.jpg" style="width:100%" onclick="onClick(this)" alt="좀비를 버텨랴">
-        <img src="/movie.jpg" style="width:100%" onclick="onClick(this)" alt="무대 돗자리 관람">
-        <img src="/mrman.jpg" style="width:100%" onclick="onClick(this)" alt="Mr.개척">
-      </div>
     </div>
   
     <!-- Pagination 
