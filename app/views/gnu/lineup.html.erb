@@ -20,9 +20,9 @@
         color:white;
       }
 	.day{
-	  margin-left:10%;
-	  width:80%;
-	  Height:100%;
+	  margin:0 auto;
+	  display:block;
+	  width:38em;
 	}
   @media  screen and (max-width: 500px) {
     header.masthead{
@@ -34,6 +34,9 @@
     }
     .wrapper>.item>.head>h2{
       font-size:1.5em;
+    }
+    .day{
+      width:16em;
     }
   }
 </style>
@@ -48,17 +51,17 @@
     <div class="wrapper" style="background-image:url(<%=asset_path('nightsky.jpg')%>)">
       <div class="item">
         <div class="head"><h2>17일(수)</h2></div> 
-        <img class="day" src="<%=asset_path('first.png')%>">
+        <img class="day" src="<%=asset_path('AOA_1.png')%>">
       </div>
       
       <div class="item">
         <div class="head"><h2>18일(목)</h2></div>
-        <img class="day" src="<%=asset_path('second.png')%>">
+        <img class="day" src="<%=asset_path('손승연_2.png')%>">
       </div>
       
       <div class="item">
         <div class="head"><h2>19일(금)</h2></div>
-        <img class="day" src="<%=asset_path('third.png')%>">
+        <img class="day" src="<%=asset_path('EXID_3.png')%>">
       </div>
     </div>
     
